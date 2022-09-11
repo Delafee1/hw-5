@@ -1,0 +1,24 @@
+@import "src/Styles/variables";
+
+.errormessage {
+  position: relative;
+  width: 375px;
+  height: 100vh;
+  margin: auto;
+  background: top / contain no-repeat white;
+  padding-top: 20px;
+
+  &__cross {
+    background: center / contain no-repeat url('./Cross.svg');
+    width: 45px;
+    height: 45px;
+    fill: $dark-pink;
+    display: flex;
+    @extend %margin-center;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

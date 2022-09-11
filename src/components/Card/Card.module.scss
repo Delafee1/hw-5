@@ -1,0 +1,68 @@
+@import "src/Styles/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 155px;
+  height: 209px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 8px 0px #0000001F;
+  position: relative;
+  cursor: pointer;
+
+  &__image {
+    margin-bottom: 11px;
+    border-radius: 10px 10px 0px 0px;
+    max-width: 155px;
+    max-height: 120px;
+  }
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    padding: 0px 12px;
+    font-size: 12px;
+    line-height: 24.59px;
+    font-weight: 500;
+    color: $black;
+    overflow: hidden;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    line-height: 16.39px;
+    font-weight: 400;
+    color: rgba(59, 59, 59, 0.5);
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    align-items: center;
+
+    &__content {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18.23px;
+      color: $red;
+    }
+
+    &__plus {
+      position: absolute;
+      background: center / contain no-repeat url('./Plus.svg');
+      width: 24px;
+      height: 24px;
+      left: 120px;
+      bottom: 10px;
+
+      &:hover circle {
+        fill: $hover-red;
+      }
+
+      &:active circle {
+        fill: $active-red;
+      }
+    }
+  }
+}

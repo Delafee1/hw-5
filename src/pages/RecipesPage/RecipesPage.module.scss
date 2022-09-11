@@ -1,0 +1,65 @@
+@import "src/Styles/variables";
+
+.recipes {
+  @extend %margin-center;
+  padding: 24px;
+  width: 375px;
+  min-height: 100vh;
+  background-color: white;
+  background-image: url("./Background.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+
+  &__heading {
+    @extend %margin-center;
+    width: 311px;
+
+    &__search {
+      margin-bottom: 16px;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      align-items: baseline;
+
+      &__multidropdown {
+        display: flex;
+      }
+
+      &__results {
+        display: flex;
+        color: $black;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__pagination {
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 155px 155px;
+    gap: 15px;
+    justify-content: center;
+    position: relative;
+
+    &_loading {
+      opacity: 0.5;
+    }
+  }
+}
+
+.loader {
+  @extend %margin-center;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
